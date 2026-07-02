@@ -1,0 +1,53 @@
+{
+  "sheet_id": "1lyfoZo_FyoBqZUeFMt9AepyVoF683f29nz6PF6cFqZc",
+  "getPending_endpoint": "https://script.google.com/macros/s/AKfycbwykkJ2vUheURlFaNXgl6xOqXINJCcIHIlIFZYgD-8yzOJUFoWrTFZhApd8czsuthyL/exec?action=getPending&ae={AE_NAME}",
+  "web_app": {
+    "url": "https://script.google.com/macros/s/AKfycbwvIvl8MXhAJL-ePmc4OmA-tApHVfM-CbdUNqW1rTzu7tofa5CGY4tLw-Cmzxqfgu6dzQ/exec",
+    "api_key": "EngrainSMAIProspecting"
+  },
+  "output_dir": "./output",
+  "ae_list": [
+    "Izzy",
+    "Mitch",
+    "Kodie",
+    "Ben",
+    "Brian",
+    "Jacob"
+  ],
+  "sightmap_verticals": [
+    "multifamily",
+    "senior living",
+    "student housing",
+    "self-storage",
+    "affordable housing",
+    "build-to-rent",
+    "apartments",
+    "residential",
+    "property management",
+    "real estate"
+  ],
+  "buyer_intent_keywords_2026": [
+    "acquires",
+    "acquisition",
+    "announces development",
+    "ground breaking",
+    "construction",
+    "lease-up",
+    "new property",
+    "appoints",
+    "names",
+    "hires",
+    "chief digital officer",
+    "cdo",
+    "vp marketing",
+    "vp digital",
+    "cmo",
+    "new leadership",
+    "expands",
+    "expansion",
+    "portfolio growth",
+    "acquires portfolio",
+    "strategic partnership",
+    "joint venture"
+  ]
+}
