@@ -1,0 +1,51 @@
+name: SM Prospecting Detector — Monday 4am
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+jobs:
+  detect-signals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run detector for Izzy (50 companies)
+        run: python3 run_detector.py --ae Izzy --count 50
+
+      - name: Run detector for Mitch (50 companies)
+        run: python3 run_detector.py --ae Mitch --count 50
+
+      - name: Run detector for Kodie (50 companies)
+        run: python3 run_detector.py --ae Kodie --count 50
+
+      - name: Run detector for Ben (50 companies)
+        run: python3 run_detector.py --ae Ben --count 50
+
+      - name: Run detector for Brian (50 companies)
+        run: python3 run_detector.py --ae Brian --count 50
+
+      - name: Run detector for Jacob (50 companies)
+        run: python3 run_detector.py --ae Jacob --count 50
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: detector-logs
+          path: output/logs/
+          retention-days: 30
