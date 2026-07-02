@@ -185,7 +185,8 @@ def consolidate_results(detection_results: list, ae_name: str, batch_id: str) ->
         })
 
     payload = {
-        "apiKey": CONFIG['web_app']['api_key'],
+        "apiKey": CONFIG["web_app"]["api_key"],
+        "sheetId": CONFIG["sheet_id"],
         "companyNews": company_news,
         "newsContacts": news_contacts,
         "batchUpdates": batch_updates
